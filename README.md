@@ -1,4 +1,4 @@
-# Progetto-IA
+# CSP PIANO DI STUDI
 All’interno del repository è presente un programma MiniZinc che permette di risolvere un problema CSP sulla creazione di un piano di studi, realizzato come progetto per l’esame di Intelligenza artificiale della facoltà di ingegneria informatica di Unifi.  
   
 Il codice del progetto si trova nel file PDS.mzn,  che sfrutta i datafiles Ingegneria.dzn e Filosofia.dzn, e va eseguito tramite MiniZinc. Il CdL su cui opera il programma è indicato nelle prime righe del file PDS.mzn tramite il comando include; per cambiare CdL quindi è necessario cambiare questa riga di programma con la keyword include seguita dal nome del datafile (.dzn) che vogliamo usare tra virgolette (ad esempio: include "Ingegneria.dzn";). Il programma richiede all’utente di inserire in input 5 valori:  
