@@ -35,9 +35,6 @@ constraint sum([cfu[exam] | exam in exams where pds[exam] /\ dp_of_exam[exam] ==
 %Vincolo sui cfu per periodo didattico
 constraint forall(n in dp)(sum([cfu[exam] | exam in exams where pds[exam] /\ dp_of_exam[exam] == n]) <=30); 
 
-%Vincolo (ridondante) sui cfu degli esami non scelti
-constraint redundant_constraint(sum([cfu[exam] | exam in exams where pds[exam]==false]) ==totalCFU-(180-fp));
-
 solve ::bool_search(pds, first_fail, indomain_min)
 satisfy;
 
