@@ -1,11 +1,12 @@
 # CSP PIANO DI STUDI
-All’interno del repository è presente un programma MiniZinc che permette di risolvere un problema CSP sulla creazione di un piano di studi, realizzato come progetto per l’esame di Intelligenza artificiale della facoltà di ingegneria informatica di Unifi.  
+Within the repository is a MiniZinc program for solving a CSP problem on curriculum creation, which was created as a project for the Artificial Intelligence exam of Unifi's Faculty of Computer Engineering.
   
-Il codice del progetto si trova nel file PDS.mzn,  che sfrutta i datafiles Ingegneria.dzn e Filosofia.dzn, e va eseguito tramite MiniZinc. Il CdL su cui opera il programma è indicato nelle prime righe del file PDS.mzn tramite il comando include; per cambiare CdL quindi è necessario cambiare questa riga di programma con la keyword include seguita dal nome del datafile (.dzn) che vogliamo usare tra virgolette (ad esempio: include "Ingegneria.dzn";). Il programma richiede all’utente di inserire in input 5 valori:  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • amax: numero massimo di crediti per i corsi con SSD affine  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • amin: numero minimo di crediti per i corsi con SSD affine  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • cmax: numero massimo di crediti per i corsi con SSD caratterizzante  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • cmin: numero minimo di crediti per i corsi con SSD caratterizzante  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • fp: numero di crediti assegnati alla prova finale  
+The code for the project is found in the file PDS.mzn, which exploits the datafiles Engineering.dzn and Philosophy.dzn, and is to be run through MiniZinc. The CdL on which the program operates is indicated in the first few lines of the PDS.mzn file via the include command; to change CdLs therefore, it is necessary to change this program line to the keyword include followed by the name of the datafile (.dzn) we want to use in quotation marks (for example: include "Engineering.dzn";). The program requires the user to input 5 values:  
+
+• amax: maximum number of credits for courses with related SSDs <br>
+• amin: minimum number of credits for courses with related SSDs <br>
+• cmax: maximum number of credits for courses with a characterizing SSD <br> 
+• cmin: minimum number of credits for courses with characterizing SSD <br> 
+• fp: number of credits assigned to the final examination <br> 
   
-In base ai valori assegnati ai parametri il programma , se esiste almeno una soluzione che rispetta tutti i vincoli del problema, elencherà tutti i piani di studio validi per il CdL. Per ottenere esattamente gli stessi risultati che ho riportato nella relazione vanno inseriti i valori di input: amax=100, amin=78, cmax=180, cmin=90, fp=6. Inoltre va configurato il solver Gecode 6.3.0 tramite il configuration editor dell’ide di MiniZInc, in modo che trovi tutte le possibili soluzioni e mostri le statistiche del problema.
+Based on the values assigned to the parameters, the program , if there is at least one solution that meets all the constraints of the problem, will list all the valid curricula. To get exactly the same results as I have given in the report the input values must be entered: amax=100, amin=78, cmax=180, cmin=90, fp=6. Also, the Gecode 6.3.0 solver must be configured via the MiniZInc ide's configuration editor so that it finds all possible solutions and shows the statistics of the problem.
